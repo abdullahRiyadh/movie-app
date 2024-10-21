@@ -41,7 +41,7 @@ const IndexPage = () => {
   // Effect to perform an initial search when the component mounts
   useEffect(() => {
     searchMovies('batman'); // Example search term for initial fetch
-  }, []); // Empty dependency array to run only on mount
+  }, [searchMovies]); 
 
   return (
     <div>
