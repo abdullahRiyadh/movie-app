@@ -12,7 +12,7 @@ const IndexPage = () => {
   const [loading, setLoading] = useState(false); // To manage loading state
 
   // Access the context methods for adding to favorites and search history
-  const { addToFavorites, addToSearchHistory } = useContext(MovieContext);
+  // const { addToFavorites, addToSearchHistory } = useContext(MovieContext);
 
   // Function to search movies based on user input, memoized with useCallback
   const searchMovies = useCallback((searchQuery) => {
