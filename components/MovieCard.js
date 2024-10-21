@@ -1,6 +1,7 @@
 import { useContext } from 'react';
+import Image from 'next/image';
+import Link from 'next/link'; 
 import { MovieContext } from '../context/MovieContext';
-import Link from 'next/link'; // Import Link for navigation
 
 const MovieCard = ({ movie }) => {
   const { addToFavorites } = useContext(MovieContext);
@@ -11,7 +12,8 @@ const MovieCard = ({ movie }) => {
     <div className="movie-card bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-2xl transition-transform duration-200 transform hover:scale-105 mx-auto flex flex-col">
       {/* Link to movie details page */}
       <Link href={`/${movie.imdbID}`}>
-        <img 
+        <Image
+
           src={movie.Poster} 
           alt={movie.Title} 
           className="w-full h-72 object-cover rounded-lg mb-3 cursor-pointer" 

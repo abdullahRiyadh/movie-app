@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Image from 'next/image'; 
 import { useEffect, useState } from 'react';
 
 const MovieDetails = () => {
@@ -39,7 +40,7 @@ const MovieDetails = () => {
     <div className="container mx-auto p-5">
       <h1 className="text-4xl font-bold mb-5 text-center text-gray-200">{movie.Title}</h1>
       <div className="flex flex-col items-center sm:flex-row sm:justify-center">
-        <img 
+        <Image
           src={movie.Poster} 
           alt={movie.Title} 
           className="w-64 h-96 object-cover rounded-lg shadow-lg mb-5 sm:mb-0 sm:mr-5 sm:w-72 sm:h-108 md:w-80 md:h-120 lg:w-96 lg:h-144" 
@@ -55,3 +56,5 @@ const MovieDetails = () => {
 };
 
 export default MovieDetails;
+
+
