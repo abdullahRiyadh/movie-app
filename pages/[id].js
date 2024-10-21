@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const MovieDetails = () => {
@@ -38,7 +39,7 @@ const MovieDetails = () => {
   return (
     <div className="container mx-auto p-5">
       <h1 className="text-4xl mb-5">{movie.Title}</h1>
-      <img src={movie.Poster} alt={movie.Title} className="w-64 h-96 object-cover rounded" />
+      <Image  src={movie.Poster} alt={movie.Title} className="w-64 h-96 object-cover rounded" />
       <p>{movie.Plot}</p>
       <p>Released: {movie.Released}</p>
       <p>Rating: {movie.imdbRating}</p>
