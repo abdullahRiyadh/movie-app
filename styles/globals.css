@@ -1,0 +1,9 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply bg-gradient-to-r from-gray-800 via-black to-gray-900 text-white;
+}
